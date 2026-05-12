@@ -1,0 +1,116 @@
+/* =========================
+   VARIABLES (COLORES + FUENTE)
+========================= */
+:root {
+    --verde-principal: #5F7D63;
+    --verde-oscuro: #3E5B45;
+    --verde-claro: #A8C3A0;
+    --beige: #F5F1EB;
+    --blanco: #ffffff;
+    --gris-texto: #555;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   TIPOGRAFÍA GLOBAL
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--beige);
+    color: var(--gris-texto);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--blanco);
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+}
+
+/* =========================
+   NAV
+========================= */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* EFECTO HOVER SUBRAYADO SUAVE */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--verde-principal);
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--verde-principal);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   BOTÓN (ej: Donar)
+========================= */
+.boton-donar {
+    background-color: var(--verde-principal); /* fondo verde oscuro */
+    color: var(--blanco); /* texto claro */
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.boton-donar:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
